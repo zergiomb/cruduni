@@ -11,11 +11,18 @@ class CreateRolsTable extends Migration
      *
      * @return void
      */
+    //table rols and 
     public function up()
     {
         Schema::create('rols', function (Blueprint $table) {
-            $table->bigIncrements('id_rol');
+            $table->id();
             $table->string('rolname');
+           
+            $table->unsignedBigInteger('user_id')->nullable();
+            //foreign key campus
+            $table->foreign('user_id')->references('id')->on('users');
+
+
             $table->timestamps();
         });
     }

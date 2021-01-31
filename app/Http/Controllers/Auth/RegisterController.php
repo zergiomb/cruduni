@@ -74,7 +74,7 @@ class RegisterController extends Controller
             'city' => $data['city'],
             'direction' => $data['direction'],
             'phone' => $data['phone'],
-            'id_rol' => $data['id_rol'],
+        
 
         ]);
     }

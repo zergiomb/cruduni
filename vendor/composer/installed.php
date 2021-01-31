@@ -406,6 +406,15 @@
         0 => '*',
       ),
     ),
+    'laravel-frontend-presets/material-dashboard' => 
+    array (
+      'pretty_version' => 'v1.1.1',
+      'version' => '1.1.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '077c8430f4faeae3bdb3d4a6c1dbca5a195a1bfc',
+    ),
     'laravel/framework' => 
     array (
       'pretty_version' => 'v7.30.4',
