@@ -1,4 +1,5 @@
-@section('title','Home')
+@extends('layout')
+@section('title','Students')
 
 
     @section('content')
@@ -40,3 +41,4 @@
         @endsection
     @endforelse
     </div>
+    

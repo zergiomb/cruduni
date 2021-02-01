@@ -16,7 +16,9 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'surname', 'code', 'email','password', 'nationality', 'city', 'direction', 'phone', 
+        'name',
+        'email',
+        'password', 
     ];
 
     /**
@@ -36,15 +38,5 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-//relationship one to many
-    public function rol()
-    {
-        return $this->hasOne('App\Rol');
-    }
-
-    public function program_users()
-    {
-        return $this->hasMany('App\program_user');
-    }
+    
 }
