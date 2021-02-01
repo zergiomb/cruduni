@@ -507,6 +507,7 @@ class ComposerStaticInit3270aefa7cbed994384f3e5e9d3e1a99
         'App\\Http\\Controllers\\CampusController' => __DIR__ . '/../..' . '/app/Http/Controllers/CampusController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\FacultysController' => __DIR__ . '/../..' . '/app/Http/Controllers/FacultysController.php',
+        'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\ProfileController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProfileController.php',
         'App\\Http\\Controllers\\ProgramsController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProgramsController.php',
         'App\\Http\\Controllers\\StudentController' => __DIR__ . '/../..' . '/app/Http/Controllers/StudentController.php',
