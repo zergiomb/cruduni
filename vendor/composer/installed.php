@@ -20,6 +20,15 @@
       ),
       'reference' => 'b9c31def6a83f84b4d4a40d35996d375755f0e08',
     ),
+    'biscolab/laravel-recaptcha' => 
+    array (
+      'pretty_version' => '5.0.0',
+      'version' => '5.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '586c4f8e599472b2920a51de998cc79d8803b5f5',
+    ),
     'brick/math' => 
     array (
       'pretty_version' => '0.9.2',
