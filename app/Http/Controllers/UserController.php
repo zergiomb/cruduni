@@ -18,4 +18,11 @@ class UserController extends Controller
     {
         return view('users.index', ['users' => $model->paginate(15)]);
     }
+
+    public function create()
+    {
+        $rols = Rol::get();
+
+        return view('users.index', compact('rols'));
+    }
 }

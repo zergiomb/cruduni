@@ -8,8 +8,11 @@ class Rol extends Model
 {
     //reverse relationship one to many
      //relationship one to many
-     public function rol_users()
+     public function users()
      {
-         return $this->hasMany('App\rol_user');
+         
+             return $this->hasMany('App\User');
+         
      }
+  
 }

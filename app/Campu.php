@@ -13,4 +13,8 @@ class Campu extends Model
     {
         return $this->hasMany('App\faculy');
     }
+    public function users()
+    {
+        return $this->hasMany('App\User');
+    }
 }

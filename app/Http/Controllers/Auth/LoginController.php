@@ -44,7 +44,7 @@ class LoginController extends Controller
 
    
    
-  /*  protected function validateLogin(Request $request)
+    protected function validateLogin(Request $request)
     {
         $request->validate([
             $this->username() => 'required|string',
@@ -52,7 +52,7 @@ class LoginController extends Controller
             'g-recaptcha-response' => 'recaptcha',
         ]);
     }
-    */
+    
            // recaptchaFieldName() => recaptchaRuleName()
           
           

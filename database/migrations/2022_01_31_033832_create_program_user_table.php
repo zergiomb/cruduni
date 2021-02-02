@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProgramUsersTable extends Migration
+class CreateProgramUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateProgramUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('program_users', function (Blueprint $table) {
+        Schema::create('program_user', function (Blueprint $table) {
             $table->id();
 
             $table->unsignedBigInteger('program_id')->nullable();
@@ -39,6 +39,6 @@ class CreateProgramUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('program_users');
+        Schema::dropIfExists('program_user');
     }
 }

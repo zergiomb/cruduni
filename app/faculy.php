@@ -13,6 +13,10 @@ class faculy extends Model
     {
         return $this->belongsTo('App\Campu');
     }
+    public function users()
+    {
+        return $this->hasMany('App\User');
+    }
 
      //relationship one to many
 

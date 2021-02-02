@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
+use App\Rol;
+use App\Campu;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -33,12 +35,33 @@ class RegisterController extends Controller
 
     /**
      * Create a new controller instance.
-     *
+     *?? null
      * @return void
      */
     public function __construct()
     {
         $this->middleware('guest');
+    }
+
+    public function create(array $data)
+    {
+
+        return User::create([
+            
+            'name' => $data['name'],
+            'surname' => $data['surname'],
+            'code' => $data['code'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+            'nationality' => $data['nationality'],
+            'city' => $data['city'],
+            'direction' => $data['direction'],
+            'phone' => $data['phone'],
+            'rol_id' => $data['rol_id']?? null,
+            'campu_id' => $data['campu_id']?? null,
+            'faculie_id' => $data['faculie_id']?? null,
+            
+        ]);
     }
 
     /**
@@ -53,7 +76,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-           // recaptchaFieldName() => recaptchaRuleName()
+             recaptchaFieldName() => recaptchaRuleName()
         ]);
     }
 
@@ -67,18 +90,7 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(array $data)
-    {
-        return User::create([
-            'name' => $data['name'],
-            'surname' => $data['surname'],
-            'code' => $data['code'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-            'nationality' => $data['nationality'],
-            'city' => $data['city'],
-            'direction' => $data['direction'],
-            'phone' => $data['phone'],
-        ]);
-    }
+    
+    
 }
+

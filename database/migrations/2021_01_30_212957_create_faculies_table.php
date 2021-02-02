@@ -21,7 +21,7 @@ class CreateFaculiesTable extends Migration
 
             $table->unsignedBigInteger('campus_id')->nullable();
             //foreign key campus
-    $table->foreign('campus_id')->references('id')->on('campus');
+            $table->foreign('campus_id')->references('id')->on('campus');
 
 
             $table->timestamps();

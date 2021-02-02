@@ -29,6 +29,9 @@ $factory->define(User::class, function (Faker $faker) {
         'city' => $faker->city,
         'direction' => $faker->direction,
         'phone' => $faker->phone,
+        'rol_id' => $faker->rol_id,
+        'campu_id' => $faker->campu_id,
+        'faculie_id' => $faker->faculie_id,
         'remember_token' => Str::random(10),
     ];
 });

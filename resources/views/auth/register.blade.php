@@ -174,17 +174,62 @@
                   </div>
                   <input type="text" name="phone" class="form-control" placeholder="{{ __('Phone...') }}" value="{{ old('phone') }}" required autocomplete="phone">
                 </div>
-                
               </div>
+
+              {{--select rol id--}}
+
+              <div class="form-group mt-2">
+                <label for="rol_id">Select your role</label>
+                <select name="rol_id" class="form-control selectpicker" data-style="btn btn-link" id="rol_id">
+                        <option selected disabled> </option>
+                        <option value="1">Admin</option>
+                        <option value="2">Student</option>
+                </select>
+              </div>
+
+                {{--select campus id--}}
+              <div class="form-group mt-5">
+                <label for="campu_id">Select your campus</label>
+                <select name="campu_id" class="form-control selectpicker" data-style="btn btn-link" id="campu_id">
+                         <option selected disabled> </option>
+                        <option value="1">Bogota</option>
+                        <option value="2">Medellin</option>
+                        <option value="3">Cali</option>
+                        <option value="4">Cartagena</option>
+                </select>
+              </div>
+
+               {{--select faculty id--}}
+               <div class="form-group mt-5">
+                <label for="faculie_id">Select your faculty</label>
+                <select name="faculie_id" class="form-control selectpicker" data-style="btn btn-link" id="faculie_id">
+                         <option selected disabled> </option>
+                        <option value="1">Matematica</option>
+                        <option value="2">Humanidades</option>
+                        <option value="3">Ingenieria</option>
+                        <option value="4">Medicina</option>
+                        <option value="5">Agronomia</option>
+                </select>
+              </div>
+
+
+
+
+
               
+                   {{-- @foreach ($rols as $rol)
+                    <option value="{{$rol->id}}">{{$rol->rolname}}</option>
+                    @endforeach--}}
+             
+
+              {{--visible chack by reCaptcha--}}
               <div class="form-check mr-auto ml-3 mt-3">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox" id="policy" name="policy" {{ old('policy', 1) ? 'checked' : '' }} >
-                  <span class="form-check-sign">
-                    <span class="check"></span>
-                  </span>
-                  {{ __('I agree with the ') }} <a href="#">{{ __('Privacy Policy') }}</a>
-                </label>
+                {!! htmlFormSnippet() !!}
+                            @error('g-recaptcha-response')
+                                <span class="invalid-feedback" role="alert" style="display: block">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
               </div>
             </div>
             <div class="card-footer justify-content-center">
