@@ -22,7 +22,7 @@ Route::get('/campus', 'CampusController@index')->name('campus');
 Route::post('/campus', 'CampusController@create')->name('campus');
 
 Route::get('/facultys', 'FacultysController@index')->name('facultys');
-Route::post('/facultys', 'CampusController@create')->name('facultys');
+Route::post('/facultys', 'FacultysController@create')->name('facultys');
 
 Route::get('/programs', 'ProgramsController@index')->name('programs');
 

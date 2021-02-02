@@ -25,9 +25,13 @@ class FacultysController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         //
+        $datafacultys = request()->except('_token');
+        faculy::insert($datafacultys);
+        return view('/home');
+        
     }
 
     /**
