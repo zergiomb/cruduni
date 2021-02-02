@@ -17,9 +17,16 @@ Route::get('/', function () {
 });
 //Route::view('/home', 'home')->name('home');
 Route::get('/student', 'StudentController@index')->name('student');
+
 Route::get('/campus', 'CampusController@index')->name('campus');
+Route::post('/campus', 'CampusController@create')->name('campus');
+
 Route::get('/facultys', 'FacultysController@index')->name('facultys');
+Route::post('/facultys', 'CampusController@create')->name('facultys');
+
 Route::get('/programs', 'ProgramsController@index')->name('programs');
+
+
 //Route::get('/', 'HomeController@index')->name('home');
 
 /*Route::get('/home', function () {

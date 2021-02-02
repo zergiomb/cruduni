@@ -133,6 +133,19 @@
                     </div>
                   </div>
 
+                  {{--profile view campus faild-
+                  <div class="row">
+                    <label class="col-sm-2 col-form-label">{{ __('Campu') }}</label>
+                      <div class="col-sm-7">
+
+                      
+                        <input class="form-control" name="campu_id" id="input-campu_id" type="text" placeholder="{{ __('Campu_id') }}" value="{{ old('campu_id',$campus) }}" required="true" aria-required="true"/>
+                        
+                    
+                      </div>
+                  </div>
+                  --}}
+
 
               </div>
               <div class="card-footer ml-auto mr-auto">
@@ -140,6 +153,45 @@
               </div>
             </div>
           </form>
+
+          <table class="table">
+            <thead>
+                <tr>
+                    <th class="text-center">#</th>
+                    <th>programs</th>
+                    <th>faculty</th>
+                    <th>campus</th>
+                    {{--<th class="text-right">Salary</th>
+                    <th class="text-right">Actions</th>--}}
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center">1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                    </td>
+                </tr>
+            </tbody>
+        </table>
         </div>
       </div>
       <div class="row">
@@ -206,4 +258,5 @@
       </div>
     </div>
   </div>
+
 @endsection

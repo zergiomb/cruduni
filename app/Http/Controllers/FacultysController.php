@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use App\faculy;
 class FacultysController extends Controller
 {
     /**
@@ -15,7 +15,9 @@ class FacultysController extends Controller
     public function index()
     {
         //
-        return view('facultys');
+        $faculys = faculy::all();
+
+        return view('facultys',compact('faculys'));
     }
 
     /**

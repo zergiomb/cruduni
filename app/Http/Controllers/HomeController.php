@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Campu;
 class HomeController extends Controller
 {
     /**
@@ -21,6 +21,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $idcam = session('campu_id');
+        
+        $campus = Campu::find($idcam,['campusname']);
+    //  return view('home');
+        return view('/home',compact('campus'));
     }
 }

@@ -11,9 +11,10 @@ class program extends Model
     {
         return $this->belongsTo('App\faculy');
     }
-
-    public function program_users()
+  //reverse relationship many to many
+    public function users()
     {
-        return $this->hasMany('App\program_user');
+        return $this->belongsToMany('App\User');
     }
+    
 }

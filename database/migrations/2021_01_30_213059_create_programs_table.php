@@ -17,6 +17,7 @@ class CreateProgramsTable extends Migration
             $table->id();
             $table->string('programname');
             $table->string('programdes');
+            $table->string('programimg');
 
             $table->unsignedBigInteger('faculie_id')->nullable();
             //foreign key campus

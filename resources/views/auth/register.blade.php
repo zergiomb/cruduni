@@ -179,7 +179,7 @@
               {{--select rol id--}}
 
               <div class="form-group mt-2">
-                <label for="rol_id">Select your role</label>
+                <label for="rol_id">Select your rol</label>
                 <select name="rol_id" class="form-control selectpicker" data-style="btn btn-link" id="rol_id">
                         <option selected disabled> </option>
                         <option value="1">Admin</option>
@@ -187,19 +187,9 @@
                 </select>
               </div>
 
-                {{--select campus id--}}
-              <div class="form-group mt-5">
-                <label for="campu_id">Select your campus</label>
-                <select name="campu_id" class="form-control selectpicker" data-style="btn btn-link" id="campu_id">
-                         <option selected disabled> </option>
-                        <option value="1">Bogota</option>
-                        <option value="2">Medellin</option>
-                        <option value="3">Cali</option>
-                        <option value="4">Cartagena</option>
-                </select>
-              </div>
+               
 
-               {{--select faculty id--}}
+               {{--select faculty id
                <div class="form-group mt-5">
                 <label for="faculie_id">Select your faculty</label>
                 <select name="faculie_id" class="form-control selectpicker" data-style="btn btn-link" id="faculie_id">
@@ -211,8 +201,10 @@
                         <option value="5">Agronomia</option>
                 </select>
               </div>
+              --}}
 
-
+                {{--select programs id--}}
+              
 
 
 

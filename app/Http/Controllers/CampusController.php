@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Campu;
 
 class CampusController extends Controller
 {
@@ -15,17 +16,27 @@ class CampusController extends Controller
     public function index()
     {
         //
-        return view('campus');
+    $campus = Campu::all();
+
+        return view('campus',compact('campus'));
     }
 
     /**
      * Show the form for creating a new resource.
-     *
+     *return Campu::create([
+            
+       *     'campusname' => $data['campusname'],
+        *    'campusdes' => $data['campusdes'],
+                      
+       * ]);
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $datacampus = request()->except('_token');
+        Campu::insert($datacampus);
+        return view('/home');
+        
     }
 
     /**
@@ -36,7 +47,11 @@ class CampusController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //data from campus form create
+       // $datacampus = request()->all();
+    
+
+     
     }
 
     /**
